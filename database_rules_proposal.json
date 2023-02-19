@@ -1,0 +1,26 @@
+{
+  "rules": {
+    "available_foods": {
+      ".read": "auth != null",
+      ".write": "auth.uid == 'mxVnjI91syWrhRVsdAX6HiZbru92' || auth.uid == 'fV9o86C8AIUuyxeGts6zrrUzpew2'"
+    },
+    "delivery_partner_location": {
+      ".read": "auth != null",
+      ".write": "auth.uid == 'mxVnjI91syWrhRVsdAX6HiZbru92' || auth.uid == 'fV9o86C8AIUuyxeGts6zrrUzpew2'"
+    },
+    "food_menu": {
+      ".read": "auth != null",
+      ".write": "auth.uid == 'mxVnjI91syWrhRVsdAX6HiZbru92' || auth.uid == 'fV9o86C8AIUuyxeGts6zrrUzpew2'"
+    },
+    "orders": {
+      ".read": "auth.uid == 'mxVnjI91syWrhRVsdAX6HiZbru92' || auth.uid == 'fV9o86C8AIUuyxeGts6zrrUzpew2'",
+      ".write": "auth.uid == 'mxVnjI91syWrhRVsdAX6HiZbru92' || auth.uid == 'fV9o86C8AIUuyxeGts6zrrUzpew2'"
+    },
+    "users": {
+      "$userId": {
+        ".read": "auth.uid == $userId",
+        ".write": "auth.uid == $userId"
+      }
+    }
+  }
+}

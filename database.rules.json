@@ -1,0 +1,15 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null",
+    "users": {
+      "$userId": {
+        "orders": {
+          ".indexOn": [
+            "ref_id"
+          ]
+        }
+      }
+    }
+  }
+}

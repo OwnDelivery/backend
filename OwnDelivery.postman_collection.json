@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "bfbc5f82-90e7-453a-8d74-cd03ccdb3da7",
+		"name": "OwnDelivery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Welcome API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"owndeliveryapp",
+						"us-central1",
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment Initiate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/payment/initiate?amount=20&customer_id=pras&order_id=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"payment",
+						"initiate"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": "20"
+						},
+						{
+							"key": "customer_id",
+							"value": "pras"
+						},
+						{
+							"key": "order_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify Payment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/payment/verify?order_id=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"",
+						"payment",
+						"verify"
+					],
+					"query": [
+						{
+							"key": "order_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
